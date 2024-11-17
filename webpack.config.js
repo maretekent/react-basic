@@ -48,8 +48,12 @@ module.exports = {
                 maxSize: 8 * 1024, // Inline files smaller than 8 KB
             },
         },
-      },
-    ]
+		},
+		{
+			test: /\.(png|jpe?g|gif|svg)$/i,
+			type: 'asset/resource',
+		},
+	]
   },
   plugins: [
     new HtmlWebpackPlugin({
